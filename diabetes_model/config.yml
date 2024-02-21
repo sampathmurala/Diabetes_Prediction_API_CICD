@@ -1,0 +1,56 @@
+# package overview
+package_name: diabetes_model
+
+# Data files
+training_data_file: diabetes_prediction.csv
+test_data_file: test.csv
+
+# Variables
+# The Variable we are attempting to predict (cnt)
+target: Diagnosis
+
+pipeline_name: diabetes_pipeline
+pipeline_save_file: diabetes_pipeline_output_v
+
+features: # final features to be use
+  - Pregnancies
+  - Glucose
+  - BloodPressure
+  - SkinThickness
+  - Insulin
+  - BMI
+  - DiabetesPedigreeFunction
+  - Age
+
+unused_fields:
+  - # Features to drop before pipeline
+
+pregnancies_var: Pregnancies
+
+glucose_var: Glucose
+
+bloodPressure_var: BloodPressure
+
+skinThickness_var: SkinThickness
+
+insulin_var: Insulin
+
+bmi_var: BMI
+
+diabetesPedigreeFunction_var: DiabetesPedigreeFunction
+
+age_var: Age
+
+# set train/test split
+test_size: 0.20
+
+# to set the random seed
+random_state: 42
+
+# alogrithm parameters
+n_estimators_low: 50
+n_estimators_high: 300
+no_trials: 50
+max_depth_low: 3
+max_depth_high: 10
+threshold: 0.5
