@@ -88,7 +88,7 @@ def run_training() -> None:
 
     # Get the best hyperparameters
     best_params = study.best_params
-    print("\nBest Hyperparameters:", best_params)
+    # print("\nBest Hyperparameters:", best_params)
 
     # Build the final model using the best parameters
     final_model = Pipeline([
